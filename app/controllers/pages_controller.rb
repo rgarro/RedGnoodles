@@ -1,4 +1,10 @@
 class PagesController < ApplicationController
+
+  # GET /pages/homepage
+  # GET /pages/homepage.json
+  def homepage
+    
+  end
   # GET /pages
   # GET /pages.json
   def index

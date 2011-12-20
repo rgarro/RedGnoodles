@@ -1,0 +1,21 @@
+ <!DOCTYPE html>
+<html lang="eng">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Manage Rent A House Display Pad</title>
+	<link rel="stylesheet" href="/stylesheets/lemon_bonsai.css" type="text/css"/>
+	<script type="text/javascript" src="/javascripts/html5.js"></script>
+	<script type="text/javascript" src="/javascripts/jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="/javascripts/jquery.masonry.min.js"></script>
+	<script type="text/javascript" src="/javascripts/lemon_bonsai_js/producer.js"></script>
+</head>
+<body>
+<div id="padFrame">
+	<div id="housesSelectorContainer" class="padComponent">houses</div>
+	<div id="mainButtonsContainer" class="padComponent"></div>
+	<div id="stageContainer" class="padComponent">
+		<%= yield %>
+	</div>
+</div>
+</body>
+</html>

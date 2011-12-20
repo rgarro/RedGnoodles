@@ -1,4 +1,11 @@
 RomajiSan::Application.routes.draw do
+  get "admin/glasshouse/login"
+
+  get "admin/glasshouse/logout"
+
+  get "admin/glasshouse/stage"
+
+  
   resources :pages
 
   # The priority is based upon order of creation:
@@ -10,6 +17,7 @@ RomajiSan::Application.routes.draw do
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
+  #match 'glasshouse/login' => 'glasshouse#login'
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
@@ -42,11 +50,7 @@ RomajiSan::Application.routes.draw do
   #   end
 
   # Sample resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.

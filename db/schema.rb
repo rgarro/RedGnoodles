@@ -11,7 +11,66 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111213022026) do
+ActiveRecord::Schema.define(:version => 20120129175758) do
+
+  create_table "dishes", :force => true do |t|
+    t.string   "title",                     :null => false
+    t.string   "alpha_desc"
+    t.integer  "tray",       :default => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "gingredients", :force => true do |t|
+    t.string   "api_name",   :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "gitems", :force => true do |t|
+    t.string   "title",                               :null => false
+    t.string   "alpha_desc"
+    t.integer  "sort",             :default => 0
+    t.boolean  "required",         :default => false
+    t.integer  "gingredient_id"
+    t.integer  "gnoodlerecipe_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "gitems", ["gingredient_id"], :name => "index_gitems_on_gingredient_id"
+  add_index "gitems", ["gnoodlerecipe_id"], :name => "index_gitems_on_gnoodlerecipe_id"
+
+  create_table "gnoodleportions", :force => true do |t|
+    t.string   "legend",           :null => false
+    t.integer  "dish_id"
+    t.integer  "gnoodlerecipe_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "gnoodleportions", ["dish_id"], :name => "index_gnoodleportions_on_dish_id"
+  add_index "gnoodleportions", ["gnoodlerecipe_id"], :name => "index_gnoodleportions_on_gnoodlerecipe_id"
+
+  create_table "gnoodlerecipes", :force => true do |t|
+    t.string   "title"
+    t.string   "alpha_desc"
+    t.text     "long_desc"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "gnoodles", :force => true do |t|
+    t.string   "resource_key",      :null => false
+    t.string   "alpha_desc"
+    t.integer  "gnoodleportion_id"
+    t.integer  "gitem_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "gnoodles", ["gitem_id"], :name => "index_gnoodles_on_gitem_id"
+  add_index "gnoodles", ["gnoodleportion_id"], :name => "index_gnoodles_on_gnoodleportion_id"
 
   create_table "pages", :force => true do |t|
     t.string   "title"

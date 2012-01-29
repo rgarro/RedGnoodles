@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  alpha_desc: MyString
+  sort: 1
+  required: false
+  gingredient: 
+  gnoodlerecipe: 
+
+two:
+  title: MyString
+  alpha_desc: MyString
+  sort: 1
+  required: false
+  gingredient: 
+  gnoodlerecipe: 

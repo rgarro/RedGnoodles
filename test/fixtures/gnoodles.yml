@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  resource_key: MyString
+  alpha_desc: MyString
+  gnoodleportion: 
+  gitem: 
+
+two:
+  resource_key: MyString
+  alpha_desc: MyString
+  gnoodleportion: 
+  gitem: 

@@ -1,0 +1,2 @@
+module Gkitchen::GingredientsHelper
+end

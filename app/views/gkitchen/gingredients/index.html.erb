@@ -1,0 +1,21 @@
+<h1>Listing gkitchen_gingredients</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @gkitchen_gingredients.each do |gkitchen_gingredient| %>
+  <tr>
+    <td><%= link_to 'Show', gkitchen_gingredient %></td>
+    <td><%= link_to 'Edit', edit_gkitchen_gingredient_path(gkitchen_gingredient) %></td>
+    <td><%= link_to 'Destroy', gkitchen_gingredient, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Gingredient', '/gkitchen/gingredients/new' %>

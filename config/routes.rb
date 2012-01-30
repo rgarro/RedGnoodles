@@ -1,10 +1,16 @@
 RomajiSan::Application.routes.draw do
-  get "admin/glasshouse/login"
+ 
 
-  get "admin/glasshouse/logout"
 
-  get "admin/glasshouse/stage"
 
+  #KITCHEN WALKWAYS
+  get "gkitchen/gingredients/index" 
+  get "gkitchen/gingredients/new"
+  get "gkitchen/gingredients/show"
+  get "gkitchen/gingredients/edit"
+  post "gkitchen/gingredients/create"
+  get "gkitchen/gingredients/update"
+  get "gkitchen/gingredients/destroy"
   
   resources :pages
 

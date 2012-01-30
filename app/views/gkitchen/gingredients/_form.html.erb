@@ -1,0 +1,17 @@
+<%= form_for(@gkitchen_gingredient) do |f| %>
+  <% if @gkitchen_gingredient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gkitchen_gingredient.errors.count, "error") %> prohibited this gkitchen_gingredient from being saved:</h2>
+
+      <ul>
+      <% @gkitchen_gingredient.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

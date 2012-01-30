@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	<meta name="author" content="Rolando Garro" />
+	<meta name="keywords" content="google display data nodes kitchen, gnoodles kitchen" />
+	<meta name="description" content="A UI to assemble Gnoodles." />
+	<meta name="robots" content="all" />
+	
+	<title>:: Gnoodles Kitchen ::</title>
+	
+	<!-- to correct the unsightly Flash of Unstyled Content. http://www.bluerobot.com/web/css/fouc.asp -->
+	<script type="text/javascript"></script>
+	<%= stylesheet_link_tag "002" %>
+	<%= stylesheet_link_tag "gkitchen" %>
+	
+	<!--><link rel="Shortcut Icon" type="image/x-icon" href="http://www.csszengarden.com/favicon.ico" />-->	
+</head>
+<body id="css-zen-garden">
+
+<div id="container">
+	<div id="intro">
+		<div id="pageHeader">
+			<h1><span>Gnoodles Kitchen</span></h1>
+			<h2><span>Tasty <acronym title="Cascading Style Sheets">Data</acronym> Servings</span></h2>
+		</div>
+	</div>
+	<div id="supportingText">
+		<%= yield %>
+		<%= render :partial=>"layouts/kitchen_floor" %>
+	</div>
+
+	
+	<div id="linkList">
+		<div id="linkList2">
+		<%= render :partial=>"layouts/kitchen_cabinets" %>			
+		</div>
+	</div>
+</div>
+</body>
+</html>

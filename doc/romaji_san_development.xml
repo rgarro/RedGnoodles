@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Db flnm="romaji_san_development" nm="romaji_san_development" ver="1.3.4">
+<VerLbl></VerLbl>
+<VerNotes></VerNotes>
+<DefTblOpts></DefTblOpts>
+<DocFolder>/Users/rolando/Documents/Aptana Studio 3 Workspace/romaji_san/doc</DocFolder>
+<Sch Cm="" nm="schemaA">
+<Tbl UsSo="1" nm="dishes">
+<TblOpts>ENGINE=InnoDB DEFAULT CHARSET=latin1</TblOpts>
+<Pk ClNs="id" nm="pkdishes"/>
+<Cl au="1" df="" nm="id" nu="0">
+<DT ds="Integer" en="" id="4" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="title" nu="0">
+<DT ds="VarChar" en="" id="12" ln="255" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="alpha_desc" nu="1">
+<DT ds="VarChar" en="" id="12" ln="255" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="0" nm="tray" nu="1">
+<DT ds="Integer" en="" id="4" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="created_at" nu="1">
+<DT ds="DateTime" en="" id="700" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="updated_at" nu="1">
+<DT ds="DateTime" en="" id="700" ln="null" sc="null" sg="1"/>
+</Cl>
+<SchTrHis/>
+</Tbl>
+<Tbl UsSo="1" nm="gingredients">
+<TblOpts>ENGINE=InnoDB DEFAULT CHARSET=latin1</TblOpts>
+<Pk ClNs="id" nm="pkgingredients"/>
+<Cl au="1" df="" nm="id" nu="0">
+<DT ds="Integer" en="" id="4" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="api_name" nu="0">
+<DT ds="VarChar" en="" id="12" ln="255" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="created_at" nu="1">
+<DT ds="DateTime" en="" id="700" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="updated_at" nu="1">
+<DT ds="DateTime" en="" id="700" ln="null" sc="null" sg="1"/>
+</Cl>
+<SchTrHis/>
+</Tbl>
+<Tbl UsSo="1" nm="gitems">
+<TblOpts>ENGINE=InnoDB DEFAULT CHARSET=latin1</TblOpts>
+<Pk ClNs="id" nm="pkgitems"/>
+<Cl au="1" df="" nm="id" nu="0">
+<DT ds="Integer" en="" id="4" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="title" nu="0">
+<DT ds="VarChar" en="" id="12" ln="255" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="alpha_desc" nu="1">
+<DT ds="VarChar" en="" id="12" ln="255" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="0" nm="sort" nu="1">
+<DT ds="Integer" en="" id="4" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="0" nm="required" nu="1">
+<DT ds="TinyInt" en="" id="-6" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="gingredient_id" nu="1">
+<DT ds="Integer" en="" id="4" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="gnoodlerecipe_id" nu="1">
+<DT ds="Integer" en="" id="4" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="created_at" nu="1">
+<DT ds="DateTime" en="" id="700" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="updated_at" nu="1">
+<DT ds="DateTime" en="" id="700" ln="null" sc="null" sg="1"/>
+</Cl>
+<Idx clu="0" nm="index_gitems_on_gingredient_id" unq="0">
+<ClNs>gingredient_id</ClNs>
+</Idx>
+<Idx clu="0" nm="index_gitems_on_gnoodlerecipe_id" unq="0">
+<ClNs>gnoodlerecipe_id</ClNs>
+</Idx>
+<SchTrHis/>
+</Tbl>
+<Tbl UsSo="1" nm="gnoodleportions">
+<TblOpts>ENGINE=InnoDB DEFAULT CHARSET=latin1</TblOpts>
+<Pk ClNs="id" nm="pkgnoodleportions"/>
+<Cl au="1" df="" nm="id" nu="0">
+<DT ds="Integer" en="" id="4" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="legend" nu="0">
+<DT ds="VarChar" en="" id="12" ln="255" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="dish_id" nu="1">
+<DT ds="Integer" en="" id="4" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="gnoodlerecipe_id" nu="1">
+<DT ds="Integer" en="" id="4" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="created_at" nu="1">
+<DT ds="DateTime" en="" id="700" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="updated_at" nu="1">
+<DT ds="DateTime" en="" id="700" ln="null" sc="null" sg="1"/>
+</Cl>
+<Idx clu="0" nm="index_gnoodleportions_on_dish_id" unq="0">
+<ClNs>dish_id</ClNs>
+</Idx>
+<Idx clu="0" nm="index_gnoodleportions_on_gnoodlerecipe_id" unq="0">
+<ClNs>gnoodlerecipe_id</ClNs>
+</Idx>
+<SchTrHis/>
+</Tbl>
+<Tbl UsSo="1" nm="gnoodlerecipes">
+<TblOpts>ENGINE=InnoDB DEFAULT CHARSET=latin1</TblOpts>
+<Pk ClNs="id" nm="pkgnoodlerecipes"/>
+<Cl au="1" df="" nm="id" nu="0">
+<DT ds="Integer" en="" id="4" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="title" nu="1">
+<DT ds="VarChar" en="" id="12" ln="255" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="alpha_desc" nu="1">
+<DT ds="VarChar" en="" id="12" ln="255" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="long_desc" nu="1">
+<DT ds="Text" en="" id="703" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="created_at" nu="1">
+<DT ds="DateTime" en="" id="700" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="updated_at" nu="1">
+<DT ds="DateTime" en="" id="700" ln="null" sc="null" sg="1"/>
+</Cl>
+<SchTrHis/>
+</Tbl>
+<Tbl UsSo="1" nm="gnoodles">
+<TblOpts>ENGINE=InnoDB DEFAULT CHARSET=latin1</TblOpts>
+<Pk ClNs="id" nm="pkgnoodles"/>
+<Cl au="1" df="" nm="id" nu="0">
+<DT ds="Integer" en="" id="4" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="resource_key" nu="0">
+<DT ds="VarChar" en="" id="12" ln="255" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="alpha_desc" nu="1">
+<DT ds="VarChar" en="" id="12" ln="255" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="gnoodleportion_id" nu="1">
+<DT ds="Integer" en="" id="4" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="gitem_id" nu="1">
+<DT ds="Integer" en="" id="4" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="created_at" nu="1">
+<DT ds="DateTime" en="" id="700" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="updated_at" nu="1">
+<DT ds="DateTime" en="" id="700" ln="null" sc="null" sg="1"/>
+</Cl>
+<Idx clu="0" nm="index_gnoodles_on_gitem_id" unq="0">
+<ClNs>gitem_id</ClNs>
+</Idx>
+<Idx clu="0" nm="index_gnoodles_on_gnoodleportion_id" unq="0">
+<ClNs>gnoodleportion_id</ClNs>
+</Idx>
+<SchTrHis/>
+</Tbl>
+<Tbl UsSo="1" nm="pages">
+<TblOpts>ENGINE=InnoDB DEFAULT CHARSET=latin1</TblOpts>
+<Pk ClNs="id" nm="pkpages"/>
+<Cl au="1" df="" nm="id" nu="0">
+<DT ds="Integer" en="" id="4" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="title" nu="1">
+<DT ds="VarChar" en="" id="12" ln="255" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="content" nu="1">
+<DT ds="Text" en="" id="703" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="created_at" nu="1">
+<DT ds="DateTime" en="" id="700" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="updated_at" nu="1">
+<DT ds="DateTime" en="" id="700" ln="null" sc="null" sg="1"/>
+</Cl>
+<SchTrHis/>
+</Tbl>
+<Tbl UsSo="1" nm="schema_migrations">
+<TblOpts>ENGINE=InnoDB DEFAULT CHARSET=latin1</TblOpts>
+<Cl au="0" df="" nm="version" nu="0">
+<DT ds="VarChar" en="" id="12" ln="255" sc="null" sg="1"/>
+</Cl>
+<Idx clu="0" nm="unique_schema_migrations" unq="1">
+<ClNs>version</ClNs>
+</Idx>
+<SchTrHis/>
+</Tbl>
+</Sch>
+<Dgm nm="diagramA">
+<RnCf FtSz="9" lkStgy="OffsetDirect" zm="1.0">
+<VbCfg>
+<Fg ky="Auto Number" vl="0"/>
+<Fg ky="Check" vl="0"/>
+<Fg ky="Comment" vl="0"/>
+<Fg ky="Data Type" vl="1"/>
+<Fg ky="Default" vl="0"/>
+<Fg ky="ENUM Values" vl="0"/>
+<Fg ky="Length" vl="1"/>
+<Fg ky="Name" vl="1"/>
+<Fg ky="Nullable" vl="0"/>
+<Fg ky="Schema Name" vl="0"/>
+<Fg ky="Signed" vl="0"/>
+</VbCfg>
+</RnCf>
+<TbGl bkCl="ffffffe6" sch="schemaA" tbl="dishes" x="50" y="50"/>
+<TbGl bkCl="ffffffe6" sch="schemaA" tbl="gingredients" x="284" y="50"/>
+<TbGl bkCl="ffffffe6" sch="schemaA" tbl="gitems" x="493" y="50"/>
+<TbGl bkCl="ffffffe6" sch="schemaA" tbl="gnoodleportions" x="50" y="171"/>
+<TbGl bkCl="ffffffe6" sch="schemaA" tbl="gnoodlerecipes" x="284" y="171"/>
+<TbGl bkCl="ffffffe6" sch="schemaA" tbl="gnoodles" x="493" y="171"/>
+<TbGl bkCl="ffffffe6" sch="schemaA" tbl="pages" x="50" y="272"/>
+<TbGl bkCl="ffffffe6" sch="schemaA" tbl="schema_migrations" x="284" y="272"/>
+</Dgm>
+<RnmMgr NxRnmId="1"/>
+<DbDocOptionMgr>
+<BasicOptionMgr>
+<Name>db.doc.option.mgr</Name>
+<BoolOpt lbl="Diagrams" nm="doc.diagrams" on="1" spl="0"/>
+<BoolOpt lbl="Foreign Keys" nm="doc.fks" on="1" spl="0"/>
+<BoolOpt lbl="Indexes" nm="doc.indexes" on="1" spl="0"/>
+<BoolOpt lbl="Overwrite CSS File" nm="doc.overwrite.css" on="1" spl="0"/>
+<BoolOpt lbl="Procedures" nm="doc.procs" on="1" spl="0"/>
+<BoolOpt lbl="Schemas" nm="doc.schemas" on="1" spl="0"/>
+<BoolOpt lbl="Sequences" nm="doc.sequences" on="1" spl="0"/>
+<BoolOpt lbl="Tables" nm="doc.tables" on="1" spl="0"/>
+<BoolOpt lbl="Triggers" nm="doc.triggers" on="1" spl="0"/>
+<BoolOpt lbl="Views" nm="doc.views" on="1" spl="0"/>
+</BasicOptionMgr>
+</DbDocOptionMgr>
+</Db>

@@ -1,3 +1,4 @@
+require 'gdata'
 class PagesController < ApplicationController
 
   # GET /pages/homepage

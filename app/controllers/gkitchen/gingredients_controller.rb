@@ -1,6 +1,10 @@
+
 class Gkitchen::GingredientsController < GkitchenController
  
   def index
+    @client = GData::Client::Blogger.new
+puts "jijii"
+puts @client.inspect    
     @gkitchen_gingredients = Gingredient.all
 
     respond_to do |format|

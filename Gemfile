@@ -22,6 +22,7 @@ end
 
 gem 'jquery-rails'
 
+gem "gdata_19", :git=>'git://github.com/tokumine/GData.git'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120129175758) do
+ActiveRecord::Schema.define(:version => 20120213000141) do
 
   create_table "dishes", :force => true do |t|
     t.string   "title",                     :null => false
@@ -71,6 +71,13 @@ ActiveRecord::Schema.define(:version => 20120129175758) do
 
   add_index "gnoodles", ["gitem_id"], :name => "index_gnoodles_on_gitem_id"
   add_index "gnoodles", ["gnoodleportion_id"], :name => "index_gnoodles_on_gnoodleportion_id"
+
+  create_table "managers", :force => true do |t|
+    t.string   "email"
+    t.string   "password"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "pages", :force => true do |t|
     t.string   "title"

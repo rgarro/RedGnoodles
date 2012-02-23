@@ -7,3 +7,23 @@
 	min-height: 300px;
 }
 
+.gkitchenform {
+	
+}
+
+.gkitchenform legend {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.gkitchenform fieldset {
+	border-style: dotted;
+	background-color: #ffd7c4;
+}
+
+.noticebox {
+	color: #FF0000;
+	background-color: #99CC66;
+	margin-top: 5px;
+	text-decoration: blink;
+}

@@ -11,6 +11,10 @@ RomajiSan::Application.routes.draw do
   post "gkitchen/gingredients/create"
   get "gkitchen/gingredients/update"
   get "gkitchen/gingredients/destroy"
+  get "gkitchen/login"
+  post "gkitchen/checklogin"
+  get "gkitchen/logout"
+  get "gkitchen/home"
   
   resources :pages
 

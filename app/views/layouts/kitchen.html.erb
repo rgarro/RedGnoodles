@@ -6,15 +6,12 @@
 	<meta name="author" content="Rolando Garro" />
 	<meta name="keywords" content="google display data nodes kitchen, gnoodles kitchen" />
 	<meta name="description" content="An UI to assemble Gnoodles." />
-	<meta name="robots" content="all" />
-	
+	<meta name="robots" content="all" />	
 	<title>:: Gnoodles Kitchen ::</title>
-	
 	<!-- to correct the unsightly Flash of Unstyled Content. http://www.bluerobot.com/web/css/fouc.asp -->
 	<script type="text/javascript"></script>
 	<%= stylesheet_link_tag "002" %>
 	<%= stylesheet_link_tag "gkitchen" %>
-	
 	<!--><link rel="Shortcut Icon" type="image/x-icon" href="http://www.csszengarden.com/favicon.ico" /> -->	
 </head>
 <body id="css-zen-garden">
@@ -26,12 +23,15 @@
 		</div>
 	</div>
 	<div id="supportingText">
+		<p class="noticebox"><%= params[:notice] %><%= notice %></p>		
 		<%= yield %>
 		<%= render :partial=>"layouts/kitchen_floor" %>
 	</div>
 	<div id="linkList">
 		<div id="linkList2">
+		<% if session[:admin_pass] %>
 		<%= render :partial=>"layouts/kitchen_cabinets" %>			
+		<% end %>
 		</div>
 	</div>
 </div>

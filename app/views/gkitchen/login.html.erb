@@ -1,0 +1,13 @@
+<%= form_tag({:action=>'checklogin'},:id=>'loginForm',:class=>'gkitchenform') do %>
+<%= field_set_tag 'Login' do %>
+<p>
+	<%= label :login,:email,"Email" %><br/>
+	<%= text_field :login,:email %>
+</p>
+<p>
+	<%= label :login,:password,"Password" %><br>
+	<%= password_field :login,:password %>
+</p>
+<% end %>
+<%= submit_tag "Login"%> <%= submit_tag("Reset",{:name=>'reset',:id=>'reset_button',:type=>'reset'}) %>
+<% end %>

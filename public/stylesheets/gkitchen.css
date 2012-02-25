@@ -5,6 +5,8 @@
 #supportingText{
 	margin-top: 10px;
 	min-height: 300px;
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
 .gkitchenform {
@@ -26,4 +28,13 @@
 	background-color: #99CC66;
 	margin-top: 5px;
 	text-decoration: blink;
+}
+
+/* gkitchen home */
+#gkitchenHome {
+	
+}
+
+#gkitchenHome h1 {
+	padding: 5px;
 }

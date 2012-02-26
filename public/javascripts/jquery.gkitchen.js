@@ -32,6 +32,6 @@
  * 
  */
 jQuery.fn.gkitchen = function(){
-	var tabs = $($('#gkitchenHome'));
+	var tabs = $($('#tabs'));
 	tabs.tabs();
 }

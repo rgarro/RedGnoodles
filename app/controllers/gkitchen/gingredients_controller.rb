@@ -1,9 +1,11 @@
 
 class Gkitchen::GingredientsController < GkitchenController
  
+ layout 'ajax'
+ 
   def index
     @client = GData::Client::Blogger.new
-puts "jijii"
+puts "here"
 puts @client.inspect    
     @gkitchen_gingredients = Gingredient.all
 

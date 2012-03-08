@@ -1,21 +1,14 @@
-<h1>Listing gkitchen_gingredients</h1>
-<%= @client.to_s%>
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<%=jqgrid_javascripts%>
+<%=jqgrid_stylesheets "gkitchen-theme"%> 
 
-<% @gkitchen_gingredients.each do |gkitchen_gingredient| %>
-  <tr>
-    <td><%= link_to 'Show', gkitchen_gingredient %></td>
-    <td><%= link_to 'Edit', edit_gkitchen_gingredient_path(gkitchen_gingredient) %></td>
-    <td><%= link_to 'Destroy', gkitchen_gingredient, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
 
-<br />
-
-<%= link_to 'New Gingredient', '/gkitchen/gingredients/new' %>
+<h1>Gingredients</h1>
+<%=raw jqgrid("Gingredients", "jqIngredients", "/gkitchen/gingredients/index", 
+	[ 
+  		{ :field => "id", :label => "id",:width=>'30' },  
+  		{ :field => "api_name", :label => "name" } 
+  	] , 
+  	{
+  		:autowidth=>true,
+  	} 
+  ) %>

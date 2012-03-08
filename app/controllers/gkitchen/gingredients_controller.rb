@@ -1,17 +1,27 @@
+require 'will_paginate/active_record'
 
 class Gkitchen::GingredientsController < GkitchenController
  
  layout 'ajax'
  
   def index
-    @client = GData::Client::Blogger.new
-puts "here"
-puts @client.inspect    
-    @gkitchen_gingredients = Gingredient.all
+    index_columns ||= [:id,:api_name]
+    current_page = params[:page] ? params[:page].to_i : 1
+    rows_per_page = params[:rows] ? params[:rows].to_i : 10
 
+    conditions={:page => current_page, :per_page => rows_per_page}
+    conditions[:order] = params["sidx"] + " " + params["sord"] unless (params[:sidx].blank? || params[:sord].blank?)
+    
+    if params[:_search] == "true"
+      conditions[:conditions]=filter_by_conditions(index_columns)
+    end
+    
+    @gingredients = Gingredient.paginate(conditions)
+    total_entries = @gingredients.total_entries
+    
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @gkitchen_gingredients }
+      format.json { render :json => @gingredients.to_jqgrid_json(index_columns, current_page, rows_per_page, total_entries)}  
     end
   end
 

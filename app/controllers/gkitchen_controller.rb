@@ -19,7 +19,7 @@ class GkitchenController < ActionController::Base
       if manager = Manager.find_by_email(params[:login][:email]) 
         if params[:login][:password] == manager.password
           session[:admin_pass] = true
-          redirect_to(:action=>"home")
+          redirect_to(:action=>"homeb")
         else
           redirect_to(:action=>"login",:notice=>"invalid password!")  
         end
@@ -38,6 +38,18 @@ class GkitchenController < ActionController::Base
   end
 
   def home
+  end
+  
+  def homeb
+    @js_files = ['gnoodleApp.js','gNoodleCtl.js','angular/angular-resource.js']
+  end
+  
+  def gingredients
+    render :layout=>'ajax'
+  end
+  
+  def gnoodlerecipes
+    render :layout=>'ajax'
   end
   
   private

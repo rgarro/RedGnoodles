@@ -29,7 +29,7 @@
 <SchTrHis/>
 </Tbl>
 <Tbl UsSo="1" nm="gingredients">
-<TblOpts>ENGINE=InnoDB DEFAULT CHARSET=latin1</TblOpts>
+<TblOpts>ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1</TblOpts>
 <Pk ClNs="id" nm="pkgingredients"/>
 <Cl au="1" df="" nm="id" nu="0">
 <DT ds="Integer" en="" id="4" ln="null" sc="null" sg="1"/>
@@ -167,6 +167,26 @@
 </Idx>
 <SchTrHis/>
 </Tbl>
+<Tbl UsSo="1" nm="managers">
+<TblOpts>ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1</TblOpts>
+<Pk ClNs="id" nm="pkmanagers"/>
+<Cl au="1" df="" nm="id" nu="0">
+<DT ds="Integer" en="" id="4" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="email" nu="1">
+<DT ds="VarChar" en="" id="12" ln="255" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="password" nu="1">
+<DT ds="VarChar" en="" id="12" ln="255" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="created_at" nu="1">
+<DT ds="DateTime" en="" id="700" ln="null" sc="null" sg="1"/>
+</Cl>
+<Cl au="0" df="" nm="updated_at" nu="1">
+<DT ds="DateTime" en="" id="700" ln="null" sc="null" sg="1"/>
+</Cl>
+<SchTrHis/>
+</Tbl>
 <Tbl UsSo="1" nm="pages">
 <TblOpts>ENGINE=InnoDB DEFAULT CHARSET=latin1</TblOpts>
 <Pk ClNs="id" nm="pkpages"/>
@@ -220,8 +240,9 @@
 <TbGl bkCl="ffffffe6" sch="schemaA" tbl="gnoodleportions" x="50" y="171"/>
 <TbGl bkCl="ffffffe6" sch="schemaA" tbl="gnoodlerecipes" x="284" y="171"/>
 <TbGl bkCl="ffffffe6" sch="schemaA" tbl="gnoodles" x="493" y="171"/>
-<TbGl bkCl="ffffffe6" sch="schemaA" tbl="pages" x="50" y="272"/>
-<TbGl bkCl="ffffffe6" sch="schemaA" tbl="schema_migrations" x="284" y="272"/>
+<TbGl bkCl="ffffffe6" sch="schemaA" tbl="managers" x="50" y="272"/>
+<TbGl bkCl="ffffffe6" sch="schemaA" tbl="pages" x="284" y="272"/>
+<TbGl bkCl="ffffffe6" sch="schemaA" tbl="schema_migrations" x="493" y="272"/>
 </Dgm>
 <RnmMgr NxRnmId="1"/>
 <DbDocOptionMgr>

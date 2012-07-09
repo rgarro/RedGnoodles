@@ -15,6 +15,9 @@ RomajiSan::Application.routes.draw do
   post "gkitchen/checklogin"
   get "gkitchen/logout"
   get "gkitchen/home"
+  get "gkitchen/homeb"
+  get "gkitchen/gingredients"
+  get "gkitchen/gnoodlerecipes"
   
   resources :pages
 

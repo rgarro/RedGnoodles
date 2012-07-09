@@ -22,5 +22,7 @@
 $(document).ready(function(){
 	
 	$("#preloadImg").PacPreloader();
-	var chefScreen = new gnoodleApp();	
+	var chefScreen = new gnoodleApp({
+			'masterTraySelector':'#deploySpace'
+		});	
 });

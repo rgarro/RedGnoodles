@@ -17,7 +17,12 @@
  */
 
 
-function gnoodleApp(){
+function gnoodleApp(options){
+		
+		var settings = $.extend(
+		{
+			'masterTraySelector':'#deploySpace'
+		},options);
 		
 		var router = new Route32({
 			'automatic':false,
@@ -27,14 +32,29 @@ function gnoodleApp(){
 		var methods = {
 			init:function(){
 				router.add("#/gingredients",function(){
-					$("#deploySpace").html("ingredients");
+					showIngredients();
 				});
 				router.add("#/gnoodlerecipes",function(){
-					$("#deploySpace").html("recipes");
+					showRecipes();
 				});
 				router.drive();
 			},
 		};
+		
+		
+		function showIngredients(){
+			$(settings.masterTraySelector).html("ingredients");
+			$(settings.masterTraySelector).masterTray(
+				{
+					'listDataUrl':'/gkitchen/services/ingredientslist',
+					'labelField':'api_name',
+					'parentSelector':'#deploySpace'
+				});
+		}
+		
+		function showRecipes(){
+			$(settings.masterTraySelector).html("recipes");
+		}
 		
 		//object constructor
 		methods.init();

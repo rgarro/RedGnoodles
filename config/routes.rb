@@ -18,6 +18,8 @@ RomajiSan::Application.routes.draw do
   get "gkitchen/homeb"
   get "gkitchen/gingredients"
   get "gkitchen/gnoodlerecipes"
+  #services
+  get "gkitchen/services/ingredientslist"
   
   resources :pages
 

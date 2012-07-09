@@ -21,19 +21,42 @@
 
 
 $.fn.masterTray = function(options){
+	var dlist=new Array();
+	var dataIsGet = false;
+	
 	var settings = $.extend(
 		{
-			'isHidden':true
+			'listDataUrl':'/gkitchen/services/ingredientslist',
+			'labelField':'api_name',
+			'parentSelector':'#deploySpace',
+			'templateID':'#masterTrayTemplate'
 		},options);
 		
 	var methods = {
 		init:function(){
-			
+			model.getAll();
 		},
-		getData:function(){
-			
+		getData:function(data){
+			var x =0;
+			$.each(data,function(i,v){
+				var obj = new Object();
+				obj.id = v.id;
+				eval("obj.label = v."+settings.labelField+";");
+				dlist[x] = obj;
+				x++;
+			});
+			var cont = $(settings.templateID).render(dlist);
+			$(settings.parentSelector).html(cont);
 		}
 	};	
+		var model = {
+			getAll:function(){
+				$.getJSON(settings.listDataUrl,function(data){
+					methods.getData(data);
+				});
+			}
+		};
+	methods.init();
 		
 	return this;	
 }	

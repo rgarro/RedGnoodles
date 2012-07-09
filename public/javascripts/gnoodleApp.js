@@ -1,5 +1,5 @@
 /**
- * Gnoodles Admin Client Side App Object 
+ * Gnoodles Experimental javascript mvc app 
  *
  *          .-""-.
  *         /[] _ _\
@@ -10,29 +10,35 @@
  *        ||LI  o ||
  *        ||'----'||
  *      /__|    |__\
- * @requires jquery, angular
+ * 
+ * @requires jQuery,jsrender,Route32,mastertray 
  * @author Rolando Garro <rgarro@gmail.com>
  * @copyright emptyart 2012
  */
-'use strict';
-
-angular.module('gnoodles',[]).config(['$routeProvider',function($routeProvider){
-	$routeProvider.
-		when('/gingredients',{template:'/gkitchen/gingredients',controller: gIngredientsCtl}).
-		when('/gnoodlerecipes',{template:'/gkitchen/gnoodlerecipes',controller: gNoodleRecipesCtl}).
-		otherwise({redirectTo:'/gingredients'});
-}]); 
-
-/*(function($){
 
 
-$.fn.gnoodleApp = function(options){
-	var settings = $.extend(
-		{
-			'isHidden':true
-		},options);
+function gnoodleApp(){
 		
-	return this;	
+		var router = new Route32({
+			'automatic':false,
+			'selector':'.steerpoint'
+		});
+		
+		var methods = {
+			init:function(){
+				router.add("#/gingredients",function(){
+					$("#deploySpace").html("ingredients");
+				});
+				router.add("#/gnoodlerecipes",function(){
+					$("#deploySpace").html("recipes");
+				});
+				router.drive();
+			},
+		};
+		
+		//object constructor
+		methods.init();
+		
+		return this;
 }	
 
-})(jQuery);*/

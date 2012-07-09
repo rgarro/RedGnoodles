@@ -38,10 +38,11 @@ class GkitchenController < ActionController::Base
   end
 
   def home
+     @js_files = ['kitchen.js']
   end
   
   def homeb
-    #@js_files = ['gnoodleApp.js','gNoodleCtl.js','angular/angular-resource.js']
+    @js_files = ['kitchen.js']
   end
   
   def gingredients

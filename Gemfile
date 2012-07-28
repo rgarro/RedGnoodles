@@ -18,6 +18,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'sass'
+
 gem 'jquery-rails'
 
 gem "gdata_19", :git=>'git://github.com/tokumine/GData.git'

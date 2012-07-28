@@ -29,7 +29,9 @@ $.fn.masterTray = function(options){
 			'listDataUrl':'/gkitchen/services/ingredientslist',
 			'labelField':'api_name',
 			'parentSelector':'#deploySpace',
-			'templateID':'#masterTrayTemplate'
+			'templateID':'#masterTrayRowTemplate',
+			'headerTemplate':'#masterTrayHeaderTemplate',
+			'title':'gIngredients'
 		},options);
 		
 	var methods = {
@@ -45,7 +47,11 @@ $.fn.masterTray = function(options){
 				dlist[x] = obj;
 				x++;
 			});
-			var cont = $(settings.templateID).render(dlist);
+			var head = {
+				title:settings.title
+			};
+			var cont = $(settings.headerTemplate).render(head);
+			cont += $(settings.templateID).render(dlist);
 			$(settings.parentSelector).html(cont);
 		}
 	};	

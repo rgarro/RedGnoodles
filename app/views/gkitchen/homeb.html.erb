@@ -1,6 +1,9 @@
 <!-- Begin masterTray Template -->
-<script id="masterTrayTemplate" type="text/x-jsrender">
-	<div>{{:#index+1}}: <b>{{>id}}</b><b>{{>label}}</b></div>
+<script id="masterTrayHeaderTemplate" type="text/x-jsrender">
+	<div class="mtitle"><b>{{>title}}</b></div>
+</script>
+<script id="masterTrayRowTemplate" type="text/x-jsrender">
+	<div class="trayRow" idval="{{>id}}"><b>{{>label}}</b></div>
 </script>
 <!-- End masterTray Template -->
 <div id="gkitchenHome">

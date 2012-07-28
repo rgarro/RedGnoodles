@@ -57,3 +57,26 @@
 	background-color: #336666;
 }
 /* end gnoodle app */
+
+/* begin deploy space */
+#deploySpace{
+	position:absolute;
+	display: block;
+	padding: 5px;
+	border: 3px dotted #D2A28B;
+	float: left;
+}
+#deploySpace .mtitle{
+	float: left;
+	width: 100%;
+	padding: 3px;
+	background-color: #DAC2BF;
+	margin-bottom: 3px;
+}
+#deploySpace .trayRow{
+	display: block;
+	padding: 3px;
+	background-color: #E1D9D9;
+	margin-bottom: 2px;
+}
+/* end deploy space */

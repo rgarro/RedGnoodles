@@ -48,7 +48,8 @@ function gnoodleApp(options){
 				{
 					'listDataUrl':'/gkitchen/services/ingredientslist',
 					'labelField':'api_name',
-					'parentSelector':'#deploySpace'
+					'parentSelector':'#deploySpace',
+					'title':'gIngredients jijij'
 				});
 		}
 		

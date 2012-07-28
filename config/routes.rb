@@ -3,6 +3,10 @@ RomajiSan::Application.routes.draw do
 
 
 
+  get "gmap/showlist"
+
+  get "gmap/addplace"
+
   #KITCHEN WALKWAYS
   get "gkitchen/gingredients/index" 
   get "gkitchen/gingredients/new"

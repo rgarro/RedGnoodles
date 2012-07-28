@@ -4,6 +4,7 @@
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // the compiled file.
 //
-//= require jquery
-//= require jquery_ujs
-//= require_tree .
+//= require html5
+//= require jquery-1.6.1.min
+//= require jquery.masonry.min
+//= require lemon_bonsai_js/producer

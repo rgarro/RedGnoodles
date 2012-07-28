@@ -1,0 +1,83 @@
+// Place all the styles related to the gkitchen controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#footer{
+  margin-top: 40%;
+}
+
+#supportingText{
+  margin-top: 10px;
+  min-height: 300px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.gkitchenform {
+  legend {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  fieldset {
+    border-style: dotted;
+    background-color: #ffd7c4;
+  }  
+}
+
+.noticebox {
+  color: #FF0000;
+  background-color: #99CC66;
+  margin-top: 5px;
+  text-decoration: blink;
+}
+
+/* gkitchen home */
+#gkitchenHome {
+
+  h1 {
+    padding: 10px;
+    color: #666633;
+  }  
+}
+
+
+
+#preloadImg{
+  margin-top: 20px;
+  margin-left: 325px;
+  width: 500px;
+  background-color: #FFFFFF; 
+  background-image: url(/stylesheets/pacnoodle.png);
+  background-repeat: no-repeat;
+  background-position: 10px 0px;
+  padding-left: 5px;
+  }
+/* begin gnoodle app */
+#gBotStage{
+  width: 100%;
+  height: 100%;
+  background-color: #336666;
+}
+/* end gnoodle app */
+
+/* begin deploy space */
+#deploySpace{
+  position:absolute;
+  display: block;
+  padding: 5px;
+  border: 3px dotted #D2A28B;
+  float: left;
+  .mtitle{
+    float: left;
+    width: 100%;
+    padding: 3px;
+    background-color: #DAC2BF;
+    margin-bottom: 3px;
+  }
+  .trayRow{
+    display: block;
+    padding: 3px;
+    background-color: #E1D9D9;
+    margin-bottom: 2px;
+  }
+}
+/* end deploy space */
